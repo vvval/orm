@@ -249,7 +249,7 @@ final class QueryBuilder
         }
 
         if ($args[0] instanceof \Closure) {
-            $args[0] = $args[0] = function ($q) use ($args): void {
+            $args[0] = function ($q) use ($args): void {
                 $args[0]($this->withQuery($q));
             };
         }
